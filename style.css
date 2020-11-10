@@ -1,0 +1,287 @@
+/* Testing purpose */
+
+.main {
+    padding: 16px;
+    margin-top: 30px;
+    height: 1500px;
+    /* Used in this example to enable scrolling */
+}
+
+
+/* Entire page */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Import font family */
+
+@font-face {
+    font-family: "big-john-regular";
+    src: url(./font/BIGJOHN.otf);
+}
+
+@font-face {
+    font-family: "slim-joe-regular";
+    src: url(./font/SlimJoe.otf);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 1rem;
+    font-family: poppins;
+}
+
+
+/* img {
+    max-width: 100%;
+    height: auto;
+} 
+.section {
+    padding: 3rem 0;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    color: #101010;
+    margin: 2rem 0 .5rem;
+    text-align: center;
+}
+
+.section-all {
+    display: block;
+    font-size: .8rem;
+    font-weight: 600;
+    color: #606060;
+    margin-bottom: 1rem;
+}
+
+.bd-grid {
+    max-width: 1024px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-column-gap: 2rem;
+    width: 100% - 3rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+} */
+
+
+/* Header */
+
+nav {
+    position: fixed;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background: #000;
+}
+
+nav:after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+nav h1 {
+    position: fixed;
+    width: 12.5rem;
+    top: 1rem;
+    left: 5%;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+nav>h1>a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul {
+    float: right;
+    margin-right: 25px;
+    list-style: none;
+    position: relative;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 3rem;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    /* position: relative; */
+    padding: 5px 15px;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    line-height: 70px;
+}
+
+nav ul li a:hover {
+    color: rgb(170, 167, 167);
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgb(170, 167, 167), 0 0 5px rgb(170, 167, 167);
+}
+
+nav ul ul li a:hover {
+    color: cyan;
+    box-shadow: none;
+}
+
+nav ul ul {
+    position: absolute;
+    top: 90px;
+    opacity: 0;
+    visibility: hidden;
+    transition: top 0.3s;
+    z-index: 999;
+}
+
+nav ul li:hover>ul {
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+}
+
+nav ul ul li {
+    position: relative;
+    margin: 0px;
+    width: 200px;
+    float: none;
+    display: list-item;
+    border-bottom: 1px solid rgba(0, 0, 0, 0, 0.3);
+    background: #1b1b1b;
+}
+
+nav ul ul li a {
+    line-height: 50px;
+}
+
+.fa-plus {
+    margin-left: 40px;
+    font-size: 15px;
+}
+
+.show,
+input {
+    display: none;
+}
+
+label #fa-bars,
+label #fa-times {
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 50px;
+    margin-right: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+
+/* #res-menu {
+    display: none;
+} */
+
+.banner-area {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(./img/banner.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    height: 70vh;
+}
+
+.banner-text {
+    width: 100%;
+    height: 150%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-text h2 {
+    font-family: "big-john-regular";
+    color: rgb(244, 244, 244);
+    margin-top: -300px;
+    font-size: 56px;
+    text-align: center;
+}
+
+@media (max-width: 968px) {
+    label #fa-bars {
+        display: block;
+    }
+    nav ul {
+        margin-right: 0px;
+        float: left;
+        position: fixed;
+        width: 100%;
+        /* height: 100vh; */
+        background: #1b1b1b;
+        top: 50px;
+        right: -100%;
+        text-align: center;
+        transition: 0.5s;
+        z-index: 10;
+    }
+    nav ul li,
+    nav ul ul li {
+        display: block;
+        width: 100%;
+        /* margin: 40px 0; */
+        line-height: 10px;
+    }
+    nav ul ul {
+        top: 70px;
+        position: static;
+        border-top: none;
+        float: none;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+    }
+    nav>ul>ul>a {
+        font-size: 16px;
+    }
+    .show {
+        display: block;
+        color: white;
+        font-size: 20px;
+        padding: 0 20px;
+        line-height: 70px;
+        cursor: pointer;
+    }
+    .show:hover {
+        color: cyan;
+    }
+    nav>ul>li>a {
+        font-size: 20px;
+    }
+    nav ul li a:hover {
+        box-shadow: none;
+    }
+    #products-header {
+        display: none;
+    }
+    [id^=products-btn]:checked+ul {
+        display: block;
+        transition: .3s;
+    }
+    #res-menu:checked~ul {
+        right: 0;
+    }
+    #res-menu:checked~label #fa-bars {
+        display: none;
+    }
+    #res-menu:checked~label #fa-times {
+        display: block;
+    }
+}
