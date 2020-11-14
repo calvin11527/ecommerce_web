@@ -1,14 +1,4 @@
-/* Testing purpose */
-
-.main {
-    padding: 16px;
-    margin-top: 30px;
-    height: 1500px;
-    /* Used in this example to enable scrolling */
-}
-
-
-/* Entire page */
+/* Home Page Style */
 
 @font-face {
     font-family: "big-john-regular";
@@ -39,10 +29,7 @@ body {
 }
 
 
-/* img {
-    max-width: 100%;
-    height: auto;
-} 
+/* 
 .section {
     padding: 3rem 0;
 }
@@ -86,6 +73,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     background: #000;
+    z-index: 1;
 }
 
 nav:after {
@@ -122,7 +110,6 @@ nav ul li {
 }
 
 nav ul li a {
-    /* position: relative; */
     padding: 5px 15px;
     color: #fff;
     font-size: 18px;
@@ -170,31 +157,34 @@ nav ul ul li a {
     line-height: 50px;
 }
 
-.fa-plus {
-    margin-left: 40px;
-    font-size: 15px;
-}
-
 .show,
-input {
+#res-menu,
+#products-btn {
     display: none;
 }
 
-label #fa-bars,
-label #fa-times {
-    font-size: 30px;
-    color: #fff;
+#menu-bars-icon {
+    width: 40px;
+    height: 40px;
     float: right;
-    line-height: 50px;
+    display: none;
+    margin-top: 5px;
     margin-right: 30px;
     cursor: pointer;
+}
+
+#close-icon {
+    width: 30px;
+    height: 30px;
+    float: right;
     display: none;
+    margin-top: 10px;
+    margin-right: 30px;
+    cursor: pointer;
 }
 
 
-/* #res-menu {
-    display: none;
-} */
+/* Home Banner Style */
 
 .banner-area {
     background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(./img/banner.jpg);
@@ -220,8 +210,14 @@ label #fa-times {
     text-align: center;
 }
 
+
+/* Media Style when navigation bar width less than 968px */
+
 @media (max-width: 968px) {
-    label #fa-bars {
+    nav {
+        height: 50px;
+    }
+    #menu-bars-icon {
         display: block;
     }
     nav ul {
@@ -241,7 +237,6 @@ label #fa-times {
     nav ul ul li {
         display: block;
         width: 100%;
-        /* margin: 40px 0; */
         line-height: 10px;
     }
     nav ul ul {
@@ -283,16 +278,16 @@ label #fa-times {
     #res-menu:checked~ul {
         right: 0;
     }
-    #res-menu:checked~label #fa-bars {
+    #res-menu:checked~label #menu-bars-icon {
         display: none;
     }
-    #res-menu:checked~label #fa-times {
+    #res-menu:checked~label #close-icon {
         display: block;
     }
 }
 
 
-/* Footer */
+/* Footer Style*/
 
 footer {
     display: flex;
