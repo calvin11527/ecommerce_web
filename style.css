@@ -196,7 +196,8 @@ nav ul ul li a {
     margin-top: 30px;
     margin-bottom: 30px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, 20rem);
+    justify-content: center;
     column-gap: 30px;
     row-gap: 30px;
 }
